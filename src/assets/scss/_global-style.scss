@@ -1,0 +1,31 @@
+$color-blue-global: rgba(22, 34, 57, 0.95);
+$color-orange-global: #f5a425;
+$color-white-global: #fff;
+
+//global classes
+.text-color-blue {
+  color: $color-blue-global;
+}
+
+.text-color-orange {
+  color: $color-orange-global;
+}
+
+.text-color-white {
+  color: $color-white-global;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0 20px;
+}
+
+//global mixins
+@mixin border-radius-global($property) {
+  -webkit-border-radius: $property;
+  -moz-border-radius: $property;
+  -ms-border-radius: $property;
+  -o-border-radius: $property;
+  border-radius: $property;
+}
