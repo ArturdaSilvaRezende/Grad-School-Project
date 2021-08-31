@@ -3,6 +3,13 @@ $color-orange-global: #f5a425;
 $color-white-global: #fff;
 
 //global classes
+
+.btn-orange {
+  background-color: $color-orange-global;
+  border: none;
+  color: $color-white-global;
+  padding: 5px;
+}
 .text-color-blue {
   color: $color-blue-global;
 }

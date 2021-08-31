@@ -40,6 +40,15 @@ module.exports = {
           loader: "file-loader",
         },
       },
+      {
+        test: [/\.webm$/, /\.mp4$/, /\.ogv$/],
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "assets/video/[name].[ext]",
+          },
+        },
+      },
     ],
   },
 

@@ -1,14 +1,22 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header header header";
+  grid-template-areas:
+    "header header header"
+    "main main main";
 
   @media screen and (max-width: 767px) {
     grid-template-columns: 100%;
-    grid-template-areas: "header";
+    grid-template-areas:
+      "header"
+      "main";
   }
 }
 
 .header {
   grid-area: header;
+}
+
+.main {
+  grid-area: main;
 }

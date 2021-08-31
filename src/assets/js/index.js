@@ -13,3 +13,11 @@ import "@fortawesome/fontawesome-free/js/brands";
 //animation header
 import "./navigation-header";
 import "./dropdown-header";
+
+// ========== main content ==========
+
+//banner area
+import "../video/course-video.mp4";
+import "../video/course-video.ogv";
+import "../video/course-video.webm";
+import "./banner-item";

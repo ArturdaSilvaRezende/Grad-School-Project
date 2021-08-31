@@ -1,0 +1,196 @@
+@import "global-style";
+
+.banner {
+  position: relative;
+
+  .banner__bg {
+    position: absolute;
+    background-color: rgba(22, 34, 57, 0.85);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+  }
+
+  .banner__video {
+    min-width: 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .banner__title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+
+    .banner__h1,
+    .banner__h2,
+    .banner__btn {
+      font-weight: 300;
+    }
+    .banner__h1 {
+      font-size: 2rem;
+    }
+    .banner__h2 {
+      margin: 15px 0;
+      font-size: 2rem;
+    }
+    .banner__btn {
+      @include border-radius-global(5px);
+    }
+  }
+
+  .banner__container {
+    height: auto;
+    position: absolute;
+    top: 88%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+
+    .banner__graduateContent {
+      width: 30%;
+
+      .banner__graduateItem {
+        padding: 20px;
+        background-color: $color-blue-global;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-orange-global;
+        }
+
+        h3 {
+          display: flex;
+          align-items: center;
+          font-weight: 300;
+
+          span {
+            margin-left: 10px;
+          }
+        }
+
+        .banner__graduateDesc {
+          display: none;
+
+          p {
+            margin: 20px 0;
+          }
+
+          a {
+            border-bottom: 2px solid $color-white-global;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .banner__title {
+      top: 40%;
+
+      .banner__h1 {
+        font-size: 1.2rem;
+      }
+
+      .banner__h2 {
+        font-size: 1.1rem;
+      }
+    }
+    .banner__graduateContent {
+      .banner__graduateItem {
+        .banner__graduateDesc {
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+    .banner__video {
+      min-width: auto;
+      min-height: auto;
+      max-width: auto;
+      max-height: auto;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .banner__title {
+      .banner__h1 {
+        font-size: 0.8rem;
+      }
+      .banner__h2 {
+        font-size: 0.8rem;
+      }
+      .banner__btn {
+        font-size: 0.8rem;
+      }
+    }
+
+    .banner__video {
+      min-width: auto;
+      min-height: auto;
+      max-width: auto;
+      max-height: auto;
+    }
+
+    .banner__container {
+      background-color: rgba(22, 34, 57, 0.85);
+      flex-direction: column;
+      top: 95%;
+
+      .banner__graduateContent {
+        width: 100%;
+        .banner__graduateItem {
+          h3 {
+            align-items: start;
+            flex-direction: column;
+          }
+          .banner__graduateDesc {
+            p {
+              font-size: 0.8rem;
+              width: 94%;
+            }
+          }
+        }
+
+        .banner__graduateItem + .banner__graduateItem {
+          border-top: 1px solid $color-white-global;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bannerItemShow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bannerItemShow {
+  animation: bannerItemShow 0.5s both;
+}
+
+@keyframes bannerItemHide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.bannerItemHide {
+  animation: bannerItemHide 0.5s both;
+}
