@@ -1,0 +1,146 @@
+@import "global-style";
+
+.tabs {
+  background: url("../img/choosing-bg.jpg");
+  padding: 30px;
+
+  .tabs__title {
+    color: $color-white-global;
+    text-align: center;
+    padding: 15px 0;
+    margin: 5% 0;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .tabs__header {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+
+    .tabs__header--text {
+      color: $color-white-global;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.2s ease;
+      width: 100%;
+
+      &:hover {
+        color: $color-orange-global;
+
+        .icon-square {
+          border: 2px solid $color-orange-global;
+          width: 40px;
+          padding: 5px;
+        }
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .tabs__body {
+    margin-top: 4%;
+
+    .tabs__content {
+      display: none;
+
+      .tabs__itens {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: top;
+
+        figure {
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        .tabs__desc {
+          font-size: 0.9rem;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .tabs__desc {
+      margin-top: 10%;
+      color: $color-white-global;
+
+      h3 {
+        color: $color-orange-global;
+        font-weight: 300;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        line-height: 1.5;
+        color: $color-white-global;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    margin-top: 0;
+
+    .tabs__title {
+      margin: 10% 0;
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    .tabs__body {
+      margin-top: 9%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-top: 210px;
+
+    .tabs__title {
+      border: 2px solid rgba(250, 250, 250, 0.1);
+      margin: 20% 0;
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    .tabs__header {
+      width: 100%;
+      .tabs__header--text {
+        p {
+          font-size: 0.7rem;
+        }
+      }
+    }
+    .tabs__body {
+      margin-top: 15%;
+      .tabs__content {
+        .tabs__itens {
+          grid-template-columns: 100%;
+          align-items: center;
+          .tabs__desc {
+            text-align: center;
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs .tabs__body > div.active {
+  display: block !important;
+  transition: 1s ease;
+}

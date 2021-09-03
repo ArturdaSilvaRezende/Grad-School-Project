@@ -51,13 +51,12 @@ const config = {
         },
       },
     ],
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: "assets/css/style.css",
+      }),
+    ],
   },
-
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "assets/css/style.css",
-    }),
-  ],
 };
 
 module.exports = merge(Common, config);

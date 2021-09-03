@@ -1,6 +1,7 @@
 @import "global-style";
 
 .banner {
+  background-color: rgba(22, 34, 57, 0.85);
   position: relative;
 
   .banner__bg {
@@ -124,6 +125,11 @@
   }
 
   @media screen and (max-width: 767px) {
+    .graduateItem {
+      border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
+    }
+
     .banner__title {
       .banner__h1 {
         font-size: 0.8rem;
@@ -144,12 +150,13 @@
     }
 
     .banner__container {
-      background-color: rgba(22, 34, 57, 0.85);
       flex-direction: column;
       top: 95%;
 
       .banner__graduateContent {
         width: 100%;
+        background-color: $color-blue-global;
+
         .banner__graduateItem {
           h3 {
             align-items: start;
@@ -161,10 +168,6 @@
               width: 94%;
             }
           }
-        }
-
-        .banner__graduateItem + .banner__graduateItem {
-          border-top: 1px solid $color-white-global;
         }
       }
     }

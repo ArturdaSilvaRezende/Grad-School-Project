@@ -1,13 +1,11 @@
 const { merge } = require("webpack-merge");
 const Common = require("./webpack.common.js");
+const path = require("path");
 
 const config = {
   devtool: "inline-source-map",
   mode: "development",
 
-  devServer: {
-    static: "./dist",
-  },
   module: {
     rules: [
       {
@@ -24,10 +22,15 @@ const config = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: "file-loader",
-        options: {
-          name: "assets/img/[name].[ext]",
-        },
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: "assets/img/[name].[ext]",
+            },
+          },
+        ],
       },
     ],
   },

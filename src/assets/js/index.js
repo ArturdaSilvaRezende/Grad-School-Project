@@ -21,3 +21,6 @@ import "../video/course-video.mp4";
 import "../video/course-video.ogv";
 import "../video/course-video.webm";
 import "./banner-item";
+
+//tabs area
+import "./tabs";
