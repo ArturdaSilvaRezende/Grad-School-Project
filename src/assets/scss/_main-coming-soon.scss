@@ -1,0 +1,132 @@
+@import "./global-style";
+
+.coming-soon {
+  background: url("../img/coming-soon-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -1px;
+  padding: 20px;
+
+  h2 {
+    font-weight: 300;
+  }
+
+  .coming-soon__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .coming-soon__counter {
+      text-align: center;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .counter__itens {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15%;
+
+        .counter__box {
+          background-color: rgba(250, 250, 250, 0.1);
+          height: 80px;
+          line-height: 40px;
+          vertical-align: middle;
+          width: 120px;
+
+          h3 {
+            font-weight: 300;
+            font-size: 1.8rem;
+          }
+
+          span {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .coming-soon__form {
+      .form__title {
+        background-color: rgba(250, 250, 250, 0.2);
+        padding: 15px;
+
+        h2 {
+          font-size: 1.8rem;
+          margin: 10% 0;
+          text-align: center;
+        }
+      }
+
+      .form__inputs {
+        background-color: rgba(250, 250, 250, 0.1);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10% 0;
+
+        input {
+          background-color: rgba(250, 250, 250, 0.2);
+          border: none;
+          margin-top: 5%;
+          padding: 8px 5px;
+          width: 80%;
+
+          &::placeholder {
+            color: $color-white-global;
+          }
+        }
+
+        button[type="submit"] {
+          margin-top: 10%;
+          padding: 8px 5px;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .coming-soon__container {
+      .coming-soon__counter {
+        h2 {
+          font-size: 1.4rem;
+        }
+        .counter__itens {
+          .counter__box {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    background-position-x: -300px;
+
+    .coming-soon__container {
+      grid-template-columns: 100%;
+      .coming-soon__counter {
+        margin: 15% 0;
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        .counter__itens {
+          flex-wrap: wrap;
+          .counter__box {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .coming-soon__form {
+        margin-bottom: 15%;
+        .form__title {
+        }
+      }
+    }
+  }
+}

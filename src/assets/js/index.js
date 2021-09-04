@@ -24,3 +24,6 @@ import "./banner-item";
 
 //tabs area
 import "./tabs";
+
+//coming soon
+import "./countdown";
