@@ -12,7 +12,6 @@
     let now = new Date().getTime();
     let distance = countDownDate - now;
     let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    console.log(days);
     let hours = Math.floor(
       (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );

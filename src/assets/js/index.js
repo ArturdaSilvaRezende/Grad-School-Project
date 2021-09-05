@@ -27,3 +27,6 @@ import "./tabs";
 
 //coming soon
 import "./countdown";
+
+//glider js
+import "./gliderCarousel";

@@ -48,12 +48,15 @@
     }
 
     .coming-soon__form {
+      margin: 0 auto;
+      width: 70%;
+
       .form__title {
         background-color: rgba(250, 250, 250, 0.2);
         padding: 15px;
 
         h2 {
-          font-size: 1.8rem;
+          font-size: 1.4rem;
           margin: 10% 0;
           text-align: center;
         }
@@ -79,6 +82,7 @@
         }
 
         button[type="submit"] {
+          cursor: pointer;
           margin-top: 10%;
           padding: 8px 5px;
           width: 80%;
@@ -89,6 +93,7 @@
 
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .coming-soon__container {
+      grid-template-columns: 60% 40%;
       .coming-soon__counter {
         h2 {
           font-size: 1.4rem;
@@ -98,6 +103,9 @@
             margin-bottom: 20px;
           }
         }
+      }
+      .coming-soon__form {
+        width: 100%;
       }
     }
   }
@@ -124,7 +132,11 @@
 
       .coming-soon__form {
         margin-bottom: 15%;
+        width: 100%;
         .form__title {
+          h2 {
+            font-size: 1.2rem;
+          }
         }
       }
     }
