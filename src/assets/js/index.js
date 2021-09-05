@@ -30,3 +30,6 @@ import "./countdown";
 
 //glider js
 import "./gliderCarousel";
+
+//presentation video
+import "./presentationVideo";

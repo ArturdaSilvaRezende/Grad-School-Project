@@ -24,3 +24,7 @@ import "../img/courses-07.jpg";
 import "../img/courses-08.jpg";
 import "../img/courses-09.jpg";
 import "../img/courses-10.jpg";
+
+//presentation video
+import "../img/video-bg.jpg";
+import "../img/main-thumb.png";
