@@ -56,7 +56,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./src/index.html",
-      minify: false,
+      minify: true,
     }),
     new CleanWebpackPlugin(),
     new webpack.SourceMapDevToolPlugin({}),
