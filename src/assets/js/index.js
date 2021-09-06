@@ -1,3 +1,6 @@
+//favicon
+import "../img/favicon.png";
+
 //custom style
 import "../scss/main.scss";
 
