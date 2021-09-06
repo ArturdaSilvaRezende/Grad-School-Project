@@ -1,7 +1,7 @@
 "use strict";
 
 ((doc) => {
-  let countDownDate = new Date("Jan 30, 2022 15:59:25").getTime();
+  let countDownDate = new Date("Jan 30, 2023 15:59:25").getTime();
 
   const idDay = doc.querySelector("#day");
   const idHour = doc.querySelector("#hour");

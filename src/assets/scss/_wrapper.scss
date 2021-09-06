@@ -3,13 +3,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
     "header header header"
-    "main main main";
+    "main main main"
+    "footer footer footer";
 
   @media screen and (max-width: 767px) {
     grid-template-columns: 100%;
     grid-template-areas:
       "header"
-      "main";
+      "main"
+      "footer";
   }
 }
 
@@ -19,4 +21,8 @@
 
 .main {
   grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
 }
