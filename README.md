@@ -30,4 +30,4 @@ npm install - Para instalar as dependências
 
 #### O site do projeto está hospedado no Firebase, caso você queira fazer uma visita ao site, basta clicar no link abaixo
 
-<a href="https://projeto-site-pessoal-51cd3.web.app/" target="_blank">My Site</a>
+<a href="https://projeto-grad-school-3e43a.web.app/" target="_blank">Grad School</a>
